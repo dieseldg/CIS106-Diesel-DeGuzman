@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-26 01:59:40 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAxOjUwOjUzIFBNOzMwMjk="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAxOjU5OjQwIFBNOzE7MzE0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Gal" type="Real" array="False" size=""/>
+            <declare name="MiTrav" type="Real" array="False" size=""/>
+            <declare name="Mpg" type="Real" array="False" size=""/>
+            <input variable="Gal"/>
+            <input variable="MiTrav"/>
+            <assign variable="Mpg" expression="MiTrav / Gal"/>
+            <output expression="&quot;Mpg is&quot; &amp; Mpg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

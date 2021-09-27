@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-26 01:40:18 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAxOjMzOjA2IFBNOzMwMjg="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAxOjQwOjE4IFBNOzE7MzEzNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num1" type="Real" array="False" size=""/>
+            <declare name="Num2" type="Real" array="False" size=""/>
+            <declare name="S" type="Real" array="False" size=""/>
+            <declare name="P" type="Real" array="False" size=""/>
+            <declare name="D" type="Real" array="False" size=""/>
+            <input variable="Num1"/>
+            <input variable="Num2"/>
+            <assign variable="S" expression="Num1 + Num2"/>
+            <assign variable="P" expression="Num1 * Num2"/>
+            <assign variable="D" expression="Num1 - Num2"/>
+            <output expression="&quot;The sum is&quot; &amp; S" newline="True"/>
+            <output expression="&quot;The product is&quot; &amp; P" newline="True"/>
+            <output expression="&quot;The difference is&quot; &amp; D" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-26 02:06:45 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAxOjU5OjQzIFBNOzMwMzc="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAyOjA2OjQ1IFBNOzE7MzE0MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="MealAmt" type="Real" array="False" size=""/>
+            <declare name="Tip" type="Real" array="False" size=""/>
+            <input variable="MealAmt"/>
+            <assign variable="Tip" expression="MealAmt * .15"/>
+            <output expression="&quot;Tip is&quot; &amp; Tip" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

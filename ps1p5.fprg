@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-26 02:14:04 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAyOjA2OjUyIFBNOzMwMzA="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTA5LTI2OzAyOjE0OjA0IFBNOzE7MzEzNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="AmtEnt" type="Real" array="False" size=""/>
+            <declare name="Tax" type="Real" array="False" size=""/>
+            <declare name="AmtTotal" type="Real" array="False" size=""/>
+            <input variable="AmtEnt"/>
+            <assign variable="Tax" expression="AmtEnt * .07"/>
+            <assign variable="AmtTotal" expression="AmtEnt + Tax"/>
+            <output expression="&quot;Amount Entered&quot; &amp; AmtEnt" newline="True"/>
+            <output expression="&quot;Tax is&quot; &amp; Tax" newline="True"/>
+            <output expression="&quot;Amount total is&quot; &amp; AmtTotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
