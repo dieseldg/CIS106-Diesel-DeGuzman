@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-05 12:01:11 AM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTA0OzExOjUzOjQyIFBNOzMwMTk="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTA1OzEyOjAxOjExIEFNOzE7MzEwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="Hours" type="Real" array="False" size=""/>
+            <declare name="PayRate" type="Real" array="False" size=""/>
+            <declare name="GrossPay" type="Real" array="False" size=""/>
+            <input variable="LastName"/>
+            <input variable="Hours"/>
+            <input variable="PayRate"/>
+            <assign variable="GrossPay" expression="Hours *PayRate"/>
+            <output expression="&quot;Gross pay is &quot; &amp; GrossPay" newline="True"/>
+            <output expression="&quot;Last name is &quot; &amp; LastName" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-04 11:53:28 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTA0OzExOjQ5OjIyIFBNOzMwMjI="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTA0OzExOjUzOjI4IFBNOzE7MzEzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Quantity" type="Real" array="False" size=""/>
+            <declare name="PricePerU" type="Real" array="False" size=""/>
+            <declare name="ExtendPrice" type="Real" array="False" size=""/>
+            <input variable="Quantity"/>
+            <input variable="PricePerU"/>
+            <assign variable="ExtendPrice" expression="Quantity * PricePerU"/>
+            <output expression="&quot;extended price is&quot; &amp; ExtendPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
