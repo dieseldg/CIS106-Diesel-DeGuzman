@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-10 10:41:17 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTEwOzEwOjI2OjIzIFBNOzMwMTQ="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTEwOzEwOjQxOjE3IFBNOzE7MzEyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="itemname" type="String" array="False" size=""/>
+            <output expression="&quot;Enter item name&quot;" newline="True"/>
+            <input variable="itemname"/>
+            <declare name="warranteecost" type="Real" array="False" size=""/>
+            <declare name="appliance" type="Real" array="False" size=""/>
+            <declare name="warcost" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;appliance cost is &quot;" newline="True"/>
+            <input variable="appliance"/>
+            <if expression="appliance &gt; 1000">
+                <then>
+                    <assign variable="warcost" expression="appliance * .10"/>
+                </then>
+                <else>
+                    <assign variable="warcost" expression="appliance * .05"/>
+                </else>
+            </if>
+            <assign variable="total" expression="appliance + warcost"/>
+            <output expression="&quot;Item name is &quot; &amp; itemname" newline="True"/>
+            <output expression="&quot;Cost of appliance is &quot; &amp; appliance" newline="True"/>
+            <output expression="&quot;Warrantee cost is &quot; &amp; warcost" newline="True"/>
+            <output expression="&quot;Total is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
