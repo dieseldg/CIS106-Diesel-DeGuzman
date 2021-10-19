@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-18 09:03:07 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE4OzA4OjUyOjIyIFBNOzMwMjc="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE4OzA5OjAzOjA3IFBNOzE7MzEzNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="principle" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter Principle amt of a CD&quot;" newline="True"/>
+            <input variable="principle"/>
+            <declare name="matDate" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter maturity date&quot;" newline="True"/>
+            <input variable="matDate"/>
+            <declare name="intRate" type="Real" array="False" size=""/>
+            <if expression="principle &gt; 100000">
+                <then>
+                    <if expression="matDate = 5">
+                        <then>
+                            <assign variable="intRate" expression=".06"/>
+                        </then>
+                        <else>
+                            <assign variable="intRate" expression=".02"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="principle &gt; 50000 and principle &lt; 100000">
+                        <then>
+                            <if expression="matDate = 10">
+                                <then>
+                                    <assign variable="intRate" expression=".05"/>
+                                </then>
+                                <else>
+                                    <if expression="matDate = 5">
+                                        <then>
+                                            <assign variable="intRate" expression=".04"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="intRate" expression=".02"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="intRate" expression=".02"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="firstYrInt" type="Real" array="False" size=""/>
+            <assign variable="firstYrInt" expression="Principle * intRate"/>
+            <output expression="&quot;Principle is &quot; &amp; principle" newline="True"/>
+            <output expression="&quot;Interest rate is &quot; &amp; intRate" newline="True"/>
+            <output expression="&quot;First yr interest is &quot; &amp; firstYrInt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

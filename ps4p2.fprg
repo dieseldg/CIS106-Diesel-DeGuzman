@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-17 11:25:30 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE3OzEwOjA3OjQ2IFBNOzMwMjU="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE3OzExOjI1OjMwIFBNOzE7MzEyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pnum" type="Integer" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="unitp" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter Part Number&quot;" newline="True"/>
+            <input variable="pnum"/>
+            <output expression="&quot;Enter Quantity&quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="pnum = 10 or pnum = 55">
+                <then>
+                    <assign variable="unitp" expression="1"/>
+                </then>
+                <else>
+                    <if expression="pnum = 99">
+                        <then>
+                            <assign variable="unitp" expression="2"/>
+                        </then>
+                        <else>
+                            <if expression="pnum = 70 or pnum = 80">
+                                <then>
+                                    <assign variable="unitp" expression="3"/>
+                                </then>
+                                <else>
+                                    <assign variable="unitp" expression="5"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="unitp * qty"/>
+            <output expression="&quot;Part number is &quot; &amp; pnum" newline="True"/>
+            <output expression="&quot;Quantity is &quot; &amp; qty" newline="True"/>
+            <output expression="&quot;Cost per unit is &quot; &amp; unitp" newline="True"/>
+            <output expression="&quot;Total is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-18 11:27:29 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE4OzExOjIwOjUwIFBNOzMwMTc="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE4OzExOjI3OjI5IFBNOzE7MzEzOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastn" type="String" array="False" size=""/>
+            <output expression="&quot;Enter last name&quot;" newline="True"/>
+            <input variable="lastn"/>
+            <declare name="salary" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter salary&quot;" newline="True"/>
+            <input variable="salary"/>
+            <declare name="joblvl" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter job level&quot;" newline="True"/>
+            <input variable="joblvl"/>
+            <declare name="brate" type="Real" array="False" size=""/>
+            <if expression="joblvl &gt;= 10">
+                <then>
+                    <assign variable="brate" expression=".25"/>
+                </then>
+                <else>
+                    <if expression="joblvl &gt;= 5 and joblvl &lt;= 9">
+                        <then>
+                            <assign variable="brate" expression=".20"/>
+                        </then>
+                        <else>
+                            <assign variable="brate" expression=".10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <assign variable="bonus" expression="salary * brate"/>
+            <output expression="&quot;Last name is &quot; &amp; lastn" newline="True"/>
+            <output expression="&quot;Bonus rate is&quot; &amp; brate" newline="True"/>
+            <output expression="&quot;Bonus is&quot; &amp; bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

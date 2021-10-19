@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-18 11:15:55 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE4OzExOjA5OjU0IFBNOzMwMjg="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTE4OzExOjE1OjU1IFBNOzE7MzEzNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ctik" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter # of concert tickets&quot;" newline="True"/>
+            <input variable="ctik"/>
+            <declare name="priceper" type="Real" array="False" size=""/>
+            <if expression="ctik &gt;= 25">
+                <then>
+                    <assign variable="priceper" expression="50"/>
+                </then>
+                <else>
+                    <if expression="ctik &lt;= 24 and ctik &gt;= 10">
+                        <then>
+                            <assign variable="priceper" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="ctik &lt;= 9 and ctik &gt;= 5">
+                                <then>
+                                    <assign variable="priceper" expression="70"/>
+                                </then>
+                                <else>
+                                    <if expression="ctik &lt; 5">
+                                        <then>
+                                            <assign variable="priceper" expression="75"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="ctik * priceper"/>
+            <output expression="&quot;Number of tickets is &quot; &amp; ctik" newline="True"/>
+            <output expression="&quot;Price per ticket is&quot; &amp; priceper" newline="True"/>
+            <output expression="&quot;Total cost is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
