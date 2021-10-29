@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 10:37:09 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI4OzEwOjM0OjE0IFBNOzMwMjI="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI4OzEwOjM3OjA5IFBNOzE7MzEzNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="startva" type="Integer" array="False" size=""/>
+            <declare name="stopva" type="Integer" array="False" size=""/>
+            <declare name="increment" type="Integer" array="False" size=""/>
+            <assign variable="startva" expression="1"/>
+            <assign variable="stopva" expression="25"/>
+            <assign variable="increment" expression="2"/>
+            <while expression="startva &lt;= stopva">
+                <output expression="&quot;Loop startvalue&quot; &amp; startva" newline="True"/>
+                <assign variable="startva" expression="startva + increment"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

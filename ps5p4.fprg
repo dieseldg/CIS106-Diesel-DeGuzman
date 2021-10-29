@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 01:28:44 AM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI4OzExOjEyOjAyIFBNOzMwMTY="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI5OzEyOjE1OjIyIEFNOzE7eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI4OzEwOjQzOjAxIFBNO3BzNXAzLmZwcmc7NzE3Mg=="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI5OzAxOjI4OjQ0IEFNOzI7MzEyMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="res" type="String" array="False" size=""/>
+            <declare name="lastn" type="String" array="False" size=""/>
+            <declare name="hourswork" type="Integer" array="False" size=""/>
+            <declare name="ratepay" type="Integer" array="False" size=""/>
+            <declare name="grosspay" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="ratepay" expression="0"/>
+            <declare name="avgpay" type="Integer" array="False" size=""/>
+            <assign variable="avgpay" expression="0"/>
+            <output expression="&quot;Do you want to continue (Yes or No) *Case Sensitive*&quot;" newline="True"/>
+            <input variable="res"/>
+            <while expression="res == &quot;Yes&quot;">
+                <assign variable="count" expression="count + 1"/>
+                <output expression="&quot;Enter employee last name&quot;" newline="True"/>
+                <input variable="lastn"/>
+                <output expression="&quot;Enter hours worked&quot;" newline="True"/>
+                <input variable="hourswork"/>
+                <output expression="&quot;Enter rate of pay&quot;" newline="True"/>
+                <input variable="ratepay"/>
+                <if expression="hourswork &gt;= 40">
+                    <then>
+                        <assign variable="ratepay" expression="ratepay * 1.5"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="grosspay" expression="hourswork * ratepay"/>
+                <assign variable="sum" expression="sum + grosspay"/>
+                <assign variable="avgpay" expression="avgpay + grosspay / count"/>
+                <output expression="&quot;Last name is &quot; &amp; lastn &amp; &quot;Gross pay is&quot; &amp; grosspay" newline="True"/>
+                <output expression="&quot;Would you like to continue? (Yes or No) Case Sensitive&quot;" newline="True"/>
+                <input variable="res"/>
+            </while>
+            <output expression="&quot;Total employees&quot; &amp; count" newline="True"/>
+            <output expression="&quot;Sum of grosspay is&quot; &amp; sum" newline="True"/>
+            <output expression="&quot;Average pay is&quot; &amp; avgpay" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

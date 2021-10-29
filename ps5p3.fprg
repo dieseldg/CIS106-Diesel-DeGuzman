@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 11:01:44 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI4OzEwOjQzOjAxIFBNOzMwMTg="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTEwLTI4OzExOjAxOjQ0IFBNOzE7MzEyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <declare name="res" type="String" array="False" size=""/>
+            <declare name="lastn" type="String" array="False" size=""/>
+            <declare name="score1" type="Real" array="False" size=""/>
+            <declare name="score2" type="Real" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="totalex1" type="Real" array="False" size=""/>
+            <assign variable="totalex1" expression="0"/>
+            <declare name="avgex1" type="Real" array="False" size=""/>
+            <output expression="&quot;Would you like to continue to compute your avg. score? ( Y or N )*CASE SENSITIVE* &quot;" newline="True"/>
+            <input variable="res"/>
+            <while expression="res == &quot;Y&quot;">
+                <assign variable="count" expression="count + 1"/>
+                <output expression="&quot;Enter last name&quot;" newline="True"/>
+                <input variable="lastn"/>
+                <output expression="&quot;Enter score 1&quot;" newline="True"/>
+                <input variable="score1"/>
+                <output expression="&quot;Enter score 2&quot;" newline="True"/>
+                <input variable="score2"/>
+                <assign variable="avg" expression="(score1 + score2) / 2"/>
+                <assign variable="totalex1" expression="totalex1 + score1"/>
+                <output expression="&quot;Student&quot; &amp; lastn &amp; &quot; has an average of&quot; &amp; avg" newline="True"/>
+                <output expression="&quot;Would you like to continue? (Y or N)&quot;" newline="True"/>
+                <input variable="res"/>
+            </while>
+            <output expression="&quot;Total count of students&quot; &amp; count" newline="True"/>
+            <assign variable="avgex1" expression="totalex1 / count"/>
+            <output expression="&quot;Average exam score 1 is &quot; &amp; avgex1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
