@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-06 07:21:03 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTA2OzA3OjEzOjM2IFBNOzMwMjY="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTA2OzA3OjIxOjAzIFBNOzE7MzEyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="7500"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="y" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <assign variable="y" expression="1"/>
+            <declare name="z" type="Integer" array="False" size=""/>
+            <while expression="num &gt;= x">
+                <assign variable="z" expression="x+y"/>
+                <output expression="x" newline="True"/>
+                <assign variable="x" expression="y"/>
+                <assign variable="y" expression="z"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

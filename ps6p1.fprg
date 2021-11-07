@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-06 06:40:45 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTA2OzA1OjUwOjA4IFBNOzMwMjQ="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTA2OzA2OjQwOjQ1IFBNOzE7MzEzMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="res" type="String" array="False" size=""/>
+            <declare name="p" type="Real" array="False" size=""/>
+            <declare name="intamt" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="yr" type="Integer" array="False" size=""/>
+            <declare name="endbal" type="Real" array="False" size=""/>
+            <declare name="totalint" type="Real" array="False" size=""/>
+            <assign variable="totalint" expression="0.00"/>
+            <output expression="&quot;Do you want to calculate interest, Yes or No&quot;" newline="True"/>
+            <input variable="res"/>
+            <while expression="res == &quot;Yes&quot;">
+                <output expression="&quot;Enter principle amount&quot;" newline="True"/>
+                <input variable="p"/>
+                <output expression="&quot;Enter Interest Rate&quot;" newline="True"/>
+                <input variable="rate"/>
+                <output expression="&quot;Year&quot; &amp; &quot;   Beginning Bal.&quot; &amp; &quot;   End Bal.&quot;" newline="True"/>
+                <for variable="yr" start="1" end="5" direction="inc" step="1">
+                    <assign variable="intamt" expression="p * rate"/>
+                    <assign variable="endbal" expression="p + intamt"/>
+                    <output expression="yr &amp; &quot;        &quot; &amp; p &amp; &quot;                 &quot; &amp; endbal" newline="True"/>
+                    <assign variable="totalint" expression="totalint + intamt"/>
+                    <assign variable="p" expression="endbal"/>
+                </for>
+                <output expression="&quot;Total interest earned is   &quot; &amp; totalint" newline="True"/>
+                <output expression="&quot;Would you like to do another calculation, Yes or No&quot;" newline="True"/>
+                <input variable="res"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
