@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-15 04:17:54 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTE1OzA0OjAxOjIxIFBNOzMwMTQ="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTE1OzA0OjE3OjU0IFBNOzI7MzEzNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="descity" type="String" array="False" size=""/>
+            <declare name="milestrav" type="Real" array="False" size=""/>
+            <declare name="galused" type="Real" array="False" size=""/>
+            <declare name="mpg" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter destination city&quot;" newline="True"/>
+            <input variable="descity"/>
+            <output expression="&quot;Enter miles traveled&quot;" newline="True"/>
+            <input variable="milestrav"/>
+            <output expression="&quot;Enter gallons used for trip&quot;" newline="True"/>
+            <input variable="galused"/>
+            <call expression="milespergallon(milestrav,galused)"/>
+            <assign variable="mpg" expression="milespergallon(milestrav,galused)"/>
+            <declare name="galprice" type="Real" array="False" size=""/>
+            <assign variable="galprice" expression="2.50"/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <call expression="tripcost(galprice,galused)"/>
+            <assign variable="cost" expression="tripcost(galprice,galused)"/>
+            <output expression="&quot;Destination city is &quot; &amp; descity" newline="True"/>
+            <output expression="&quot;Miles traveled is &quot; &amp; milestrav" newline="True"/>
+            <output expression="&quot;Cost of gas is &quot; &amp; cost" newline="True"/>
+            <output expression="&quot;Miles per gallon is &quot; &amp; mpg" newline="True"/>
+        </body>
+    </function>
+    <function name="milespergallon" type="Real" variable="mpg">
+        <parameters>
+            <parameter name="milestrav" type="Real" array="False"/>
+            <parameter name="galused" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="mpg" type="Real" array="False" size=""/>
+            <assign variable="mpg" expression="milestrav / galused"/>
+        </body>
+    </function>
+    <function name="tripcost" type="Real" variable="cost">
+        <parameters>
+            <parameter name="galprice" type="Real" array="False"/>
+            <parameter name="galused" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <assign variable="cost" expression="galprice * galused"/>
+        </body>
+    </function>
+</flowgorithm>

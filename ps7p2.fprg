@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-15 04:00:35 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTE1OzAzOjQ5OjQzIFBNOzMwMjk="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTE1OzA0OjAwOjM1IFBNOzI7MzEyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastn" type="String" array="False" size=""/>
+            <declare name="nhits" type="Integer" array="False" size=""/>
+            <declare name="bats" type="Integer" array="False" size=""/>
+            <declare name="bavg" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name&quot;" newline="True"/>
+            <input variable="lastn"/>
+            <output expression="&quot;Enter number of hits&quot;" newline="True"/>
+            <input variable="nhits"/>
+            <output expression="&quot;Enter number of bats&quot;" newline="True"/>
+            <input variable="bats"/>
+            <call expression="battleavg(nhits,bats)"/>
+            <assign variable="bavg" expression="battleavg(nhits,bats)"/>
+            <output expression="&quot;Last name is &quot; &amp; lastn" newline="True"/>
+            <output expression="&quot;Batting average is &quot; &amp; bavg" newline="True"/>
+        </body>
+    </function>
+    <function name="battleavg" type="Real" variable="bavg">
+        <parameters>
+            <parameter name="nhits" type="Integer" array="False"/>
+            <parameter name="bats" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="bavg" type="Real" array="False" size=""/>
+            <assign variable="bavg" expression="bats / nhits"/>
+        </body>
+    </function>
+</flowgorithm>

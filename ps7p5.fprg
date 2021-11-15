@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xslyfx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-15 05:00:32 PM"/>
+        <attribute name="created" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTE1OzA0OjQ4OjA4IFBNOzMwMzA="/>
+        <attribute name="edited" value="eHNseWZ4O0RFU0tUT1AtTUhSRTU0SzsyMDIxLTExLTE1OzA1OjAwOjMyIFBNOzE7MzEyNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastn" type="String" array="False" size=""/>
+            <declare name="credithour" type="Real" array="False" size=""/>
+            <declare name="discode" type="String" array="False" size=""/>
+            <declare name="tuitionowe" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter student last name&quot;" newline="True"/>
+            <input variable="lastn"/>
+            <output expression="&quot;Enter student credit hours&quot;" newline="True"/>
+            <input variable="credithour"/>
+            <output expression="&quot;Enter district code (I or O)&quot;" newline="True"/>
+            <input variable="discode"/>
+            <call expression="tuitionowe2(credithour, discode)"/>
+            <assign variable="tuitionowe" expression="tuitionowe2(credithour,discode)"/>
+            <output expression="&quot;Student last name is &quot; &amp; lastn" newline="True"/>
+            <output expression="&quot;Tuition owed is &quot; &amp; tuitionowe" newline="True"/>
+        </body>
+    </function>
+    <function name="tuitionowe2" type="Real" variable="tuitionowe">
+        <parameters>
+            <parameter name="credithour" type="Real" array="False"/>
+            <parameter name="discode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tuitionowe" type="Real" array="False" size=""/>
+            <declare name="credprice" type="Real" array="False" size=""/>
+            <if expression="discode == &quot;I&quot;">
+                <then>
+                    <assign variable="credprice" expression="250"/>
+                </then>
+                <else>
+                    <if expression="discode == &quot;O&quot;">
+                        <then>
+                            <assign variable="credprice" expression="550"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <assign variable="tuitionowe" expression="credithour * credprice"/>
+        </body>
+    </function>
+</flowgorithm>
